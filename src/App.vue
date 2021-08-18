@@ -1,12 +1,8 @@
 <template>
 <div>
-  <h1>{{ titulo }}</h1>
   <h1 v-text="titulo"/>
   <ul>
-    <li>
-      <img v-bind:src="foto.url" v-bind:alt="foto.titulo">
-    </li>
-    <li>
+    <li v-for="foto of fotos">
       <img :src="foto.url" :alt="foto.titulo">
     </li>
   </ul>
@@ -17,11 +13,17 @@
 export default {
   data() {
     return {
-      titulo: "oiiic",
-      foto: {
-        url: 'https://www.petz.com.br/blog/wp-content/uploads/2021/03/piercing-para-cachorro-2.jpg',
-        titulo: 'cachorro'
-      }
+      titulo: "alura_animal",
+      fotos: [
+        {
+          url: 'https://www.petz.com.br/blog/wp-content/uploads/2021/03/piercing-para-cachorro-2.jpg',
+          titulo: 'animal_1'
+        },
+        {
+          url: 'https://saude.abril.com.br/wp-content/uploads/2021/03/bichos-foto-vauvau-Getty-Images.png',
+          titulo: 'animal_2'
+        }
+      ]
     }
   }
 }
