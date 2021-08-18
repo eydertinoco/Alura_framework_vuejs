@@ -17,7 +17,7 @@
 export default {
   data() {
     return {
-      titulo: "Alurapic",
+      titulo: "oiiic",
       foto: {
         url: 'https://www.petz.com.br/blog/wp-content/uploads/2021/03/piercing-para-cachorro-2.jpg',
         titulo: 'cachorro'
