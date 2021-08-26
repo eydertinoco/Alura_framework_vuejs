@@ -20,7 +20,7 @@ http://localhost:3000/v1/fotos
 
       <meu-painel :titulo="foto.titulo">
 
-        <img class="imagem-responsiva" :src="foto.url" :alt="foto.titulo">
+        <imagem-responsiva :url="foto.url" :titulo="foto.titulo"/>
 
       </meu-painel>
 
@@ -31,13 +31,15 @@ http://localhost:3000/v1/fotos
 </template>
 
 <script>
+import ImagemResponsiva from './components/shared/imagem-responsiva/imagemResponsiva.vue';
 import Painel from './components/shared/panel/Painel.vue'
 
 export default {
 
   components: {
 
-    'meu-painel': Painel
+    'meu-painel': Painel,
+    'imagem-responsiva': ImagemResponsiva
   },
 
   data () {
@@ -87,10 +89,6 @@ export default {
 
   .lista-fotos-item {
     display: inline-block;
-  }
-
-  .imagem-responsiva {
-    width: 100%;
   }
 
   .filtro {
