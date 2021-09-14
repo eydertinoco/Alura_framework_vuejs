@@ -11,6 +11,8 @@
 
         <imagem-responsiva :url="foto.url" :titulo="foto.titulo"/>
 
+        <meu-botao tipo="button" rotulo="REMOVER"/>
+
       </meu-painel>
 
     </li>
@@ -21,14 +23,16 @@
 
 <script>
 import ImagemResponsiva from '../shared/imagem-responsiva/imagemResponsiva.vue';
-import Painel from '../shared/panel/Painel.vue'
+import Painel from '../shared/panel/Painel.vue';
+import Botao from '../shared/botao/Botao.vue';
 
 export default {
 
   components: {
 
     'meu-painel': Painel,
-    'imagem-responsiva': ImagemResponsiva
+    'imagem-responsiva': ImagemResponsiva,
+    'meu-botao' : Botao
   },
 
   data () {
