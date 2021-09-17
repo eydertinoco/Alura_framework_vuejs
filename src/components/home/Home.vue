@@ -9,12 +9,12 @@
 
       <meu-painel :titulo="foto.titulo">
 
-        <imagem-responsiva :url="foto.url" :titulo="foto.titulo"/>
+        <imagem-responsiva v-meu-transfrom="{ incremento: 90, animate: true }" :url="foto.url" :titulo="foto.titulo"/>
 
         <!--@click.native="remove(foto)"-->
         <meu-botao tipo="button" rotulo="REMOVER" 
         @botaoAtivado="remove(foto)" 
-        v-bind:confirmacao="false" 
+        v-bind:confirmacao="true" 
         estilo="perigo">
         </meu-botao>
 
