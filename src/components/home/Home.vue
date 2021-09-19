@@ -9,7 +9,7 @@
 
       <meu-painel :titulo="foto.titulo">
 
-        <imagem-responsiva v-meu-transfrom="{ incremento: 90, animate: true }" :url="foto.url" :titulo="foto.titulo"/>
+        <imagem-responsiva v-meu-transfrom:scale.animate="2" :url="foto.url" :titulo="foto.titulo"/>
 
         <!--@click.native="remove(foto)"-->
         <meu-botao tipo="button" rotulo="REMOVER" 
