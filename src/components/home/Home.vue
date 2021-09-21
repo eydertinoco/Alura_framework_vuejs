@@ -74,8 +74,7 @@ export default {
           this.fotos.splice(indice, 1); //Vai remover foto do array;
           this.mensagem = 'Foto removida com sucesso.';
         }, err => {
-          console.log(err);
-          this.mensagem = 'Não foi possivel remover a foto';
+          this.mensagem = err.message;
         });
     }
   },
@@ -86,7 +85,10 @@ export default {
 
     this.service
       .lista()
-      .then(fotos => this.fotos = fotos, err => console.log(err));
+      .then(fotos => this.fotos = fotos, err => this.mensagem = err.message);{
+        console.log(err);
+        this.mensagem = 'Não foi possível obter as fotos, tente mais tarde.';
+      });
 
     //this.resource = this.$resource('v1/fotos{/id}');
     //this.resource
