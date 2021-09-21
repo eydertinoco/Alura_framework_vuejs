@@ -14,6 +14,9 @@
           <imagem-responsiva v-meu-transfrom:scale.animate="2" :url="foto.url" :titulo="foto.titulo"/>
 
           <!--@click.native="remove(foto)"-->
+          <router-link :to="{ name: 'alterar', params: { id: foto._id } }">
+            <meu-botao tipo="button" rotulo="ALTERAR"/>
+          </router-link>
           <meu-botao tipo="button" rotulo="REMOVER" 
           @botaoAtivado="remove(foto)" 
           v-bind:confirmacao="true" 
