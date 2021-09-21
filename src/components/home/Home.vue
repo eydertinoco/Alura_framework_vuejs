@@ -66,14 +66,14 @@ export default {
     remove(foto) {
 
       this.service.apaga(foto._id)
-      .then(() => {
-        let indice = this.fotos.indexOf(foto);
-        this.fotos.splice(indice, 1); //Vai remover foto do array;
-        this.mensagem = 'Foto removida com sucesso.';
-      }, err => {
-        console.log(err);
-        this.mensagem = 'Não foi possivel remover a foto';
-      });
+        .then(() => {
+          let indice = this.fotos.indexOf(foto);
+          this.fotos.splice(indice, 1); //Vai remover foto do array;
+          this.mensagem = 'Foto removida com sucesso.';
+        }, err => {
+          console.log(err);
+          this.mensagem = 'Não foi possivel remover a foto';
+        });
     }
   },
 
@@ -81,12 +81,20 @@ export default {
 
     this.service = new FotoService(this.$resource);
 
-    this.service.lista()
-
-    this.$http
-      .get('v1/fotos')
-      .then(res => res.json())
+    this.service
+      .lista()
       .then(fotos => this.fotos = fotos, err => console.log(err));
+
+    //this.resource = this.$resource('v1/fotos{/id}');
+    //this.resource
+    //  .query()
+    //  .then(res => res.json())
+    //  .then(fotos => this.fotos = fotos, err => console.log(err));
+
+    //this.$http
+    //  .get('v1/fotos')
+    //  .then(res => res.json())
+    //  .then(fotos => this.fotos = fotos, err => console.log(err));
   }
 }
 </script>
