@@ -85,10 +85,11 @@ export default {
 
     this.service
       .lista()
-      .then(fotos => this.fotos = fotos, err => this.mensagem = err.message);{
-        console.log(err);
-        this.mensagem = 'Não foi possível obter as fotos, tente mais tarde.';
-      });
+      .then(fotos => this.fotos = fotos, err => this.mensagem = err.message);
+      //{
+      //  console.log(err);
+      //  this.mensagem = 'Não foi possível obter as fotos, tente mais tarde.';
+      //});
 
     //this.resource = this.$resource('v1/fotos{/id}');
     //this.resource
