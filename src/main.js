@@ -7,6 +7,14 @@ import './directives/Transfrom';
 import VeeValidate from 'vee-validate'; //npm install vee-validate@2.0.0-beta.18 --save
 import msg from './pt_BR';
 
+//Gerar os arquivos para distribuir nossa aplicação
+//npm run build
+//Pasta dist criada
+
+//Servidor Local para ler a aplicação da build
+//
+//Passar a pasta dist e arquivo index.html 
+
 Vue.use(VueResource);
 Vue.http.options.root = 'http://localhost:3000';
 Vue.use(VueRouter);
