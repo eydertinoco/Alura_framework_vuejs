@@ -1,6 +1,8 @@
 # alurapic
 
 > A Vue.js project
+Esse projeto é o projeto finalizado escrito pelo Professor Flavio Henrique de Souza Almeida.
+Caso queira ver meus comentários e a finalização do meu código durante a aula, visualize Branch 14.
 
 ## Build Setup
 
