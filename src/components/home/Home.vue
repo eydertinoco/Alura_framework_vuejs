@@ -2,12 +2,14 @@
   <div>
     <h1 class="centralizado" v-text="titulo"/>
 
+    <img src="static/teste.jpg">
+
     <p v-show="mensagem" class="centralizado">{{ mensagem }}</p>
 
     <input type="search" class="filtro" v-on:input="filtro = $event.target.value" placeholder="filtre por parte do título"/>
 
     <ul class="lista-fotos">
-      <li class="lista-fotos-item" v-for="foto in fotosComFiltro">
+      <li class="lista-fotos-item" v-for="foto in fotosComFiltro" :key="foto._id">
 
         <meu-painel :titulo="foto.titulo">
 
